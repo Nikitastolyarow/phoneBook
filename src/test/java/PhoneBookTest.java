@@ -26,7 +26,7 @@ public class PhoneBookTest {
         long number = 12345678L;
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add(name,number);
-        Long result = phoneBook.FindByName(name);
-        assertEquals(name,result);
+        Long result = phoneBook.findByName(name);
+        assertEquals(Long.valueOf(number),result);
     }
 }
