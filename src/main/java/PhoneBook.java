@@ -1,8 +1,12 @@
 import java.util.HashMap;
 
 public class PhoneBook {
-    HashMap<String, String> namesAndNumber = new HashMap<>();
-    public static int add (String name, String number){
-        return 0;
+    public HashMap<String, Long> namesAndNumber = new HashMap<>();
+
+    public int add(String name, long number) {
+        if (!namesAndNumber.containsKey(name)) {
+            namesAndNumber.put(name, number);
+        }
+        return namesAndNumber.size();
     }
 }
