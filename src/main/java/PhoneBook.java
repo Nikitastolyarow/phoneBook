@@ -1,6 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class PhoneBook {
     public HashMap<String, Long> namesAndNumber = new HashMap<>();
 
@@ -20,5 +22,8 @@ public class PhoneBook {
     }
     public Long findByName(String name){
         return namesAndNumber.get(name);
+    }
+    public String printAllNames() {
+        return null;
     }
 }
