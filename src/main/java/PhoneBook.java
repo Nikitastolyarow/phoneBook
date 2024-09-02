@@ -1,6 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
-
+import java.util.TreeMap;
 
 
 public class PhoneBook {
@@ -24,6 +24,11 @@ public class PhoneBook {
         return namesAndNumber.get(name);
     }
     public String printAllNames() {
-        return null;
+        TreeMap<String, Long> sort = new TreeMap<>(namesAndNumber);
+        if (sort.isEmpty()) {
+            return "Нет контактов";
+        }
+        return String.join(", ", sort.keySet());
+
     }
 }
