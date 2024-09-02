@@ -18,4 +18,7 @@ public class PhoneBook {
                 .findFirst()
                 .orElse(null);
     }
+    public Long FindByName(String name){
+        return null;
+    }
 }

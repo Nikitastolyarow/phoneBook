@@ -20,4 +20,13 @@ public class PhoneBookTest {
         String result = phoneBook.findByNumber(number);
         assertEquals(name,result);
     }
+    @Test
+    public void testFindByName(){
+        String name = "Nik";
+        long number = 12345678L;
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add(name,number);
+        Long result = phoneBook.FindByName(name);
+        assertEquals(name,result);
+    }
 }
